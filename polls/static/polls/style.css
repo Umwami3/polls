@@ -1,0 +1,84 @@
+  :root{
+    background-color: lightgray;
+  }
+  li a{
+    color: green;
+  }
+  .container{
+    z-index: 2;
+    display: inline-block;
+    width: auto;
+    height: 100px;
+    padding: 20px 20px 20px 0;
+    margin: 50px;
+    background-color: skyblue; 
+    border-radius: 20px;
+    line-height: 1.5;
+  }
+  .container:hover{
+    transform: translateY(10px) scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+  li{
+    list-style: none;
+  }
+  li::before{
+    content: "👉";
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .circle{
+    position: relative;
+    opacity: .4;
+    z-index: 0;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    right: 10%;
+    overflow: hidden;
+    animation: move 3s ease-in-out infinite;
+  }
+  .circle::before, .circle::after{
+    content:'';
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    animation: move 3s ease-in-out infinite;
+  }
+  .circle::before{
+    top: 40px;
+    right: 20px;
+    background-color: blue;
+  }
+  .circle::after{
+    top: 80px;
+    left: 20px;
+    background-color: green;
+  }
+  #umwami-couture{
+    z-index: 2;
+    position: relative;
+    font-size: 22px;
+    color: white;
+    margin: auto;
+    top: 65%;
+    opacity: 1;
+    left: 13%;
+    padding: auto;
+  }
+  @keyframes move {
+      0% { transform: rotate(0deg);
+          translateX: 0;
+          translateY: 0; }
+      100% { transform: rotate(360deg);
+          translateX: 10px;
+          translateY: 10px; }
+  }
